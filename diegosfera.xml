@@ -116,9 +116,10 @@ padding-bottom:14px;
 }
 #menunav {
 background: white;text-align:center;
-border-bottom: 1px solid #DFDFDF;font-family: 'Lora', serif;
+border-bottom: 1px solid #DFDFDF;font-family: 'Helvetica', serif;
 }
 .menunav {
+font-family: 'Helvetica', serif;
 text-align: left;
 display: inline;
 margin: 0;
@@ -383,6 +384,13 @@ margin:0 auto !important;
 margin-top: -30px;
 }
 
+/*MI EDICIÓN*/
+
+.list-label-widget-content li
+{
+  display:inline-block;
+  list-style:none;
+}
 
 /* Css3 Media Queries */
 
@@ -1407,7 +1415,7 @@ document.getElementById(&#39;fb-root&#39;).appendChild(e);
     <div class='fauxborder-right header-fauxborder-right'/>
     <div class='region-inner header-inner'>
       <b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
-        <b:widget id='Header1' locked='true' title='Flat Diary (Header)' type='Header'>
+        <b:widget id='Header1' locked='true' title='La Diegosfera (cabecera)' type='Header'>
           <b:includable id='main'>
 
   <b:if cond='data:useImage'>
@@ -1487,21 +1495,103 @@ document.getElementById(&#39;fb-root&#39;).appendChild(e);
     </header>
  
 <div id='menunav'>
-<ul class='menunav'><li><a href='/'>Home</a></li>
+<ul class='menunav'><li><a href='/'>Inicio</a></li>
 <li><a href='your-link-here'>About</a></li>
-<li>
-<a href='your-link-here'>  Portfolio</a>
-<ul>
-<li><a href='your-link-here'>Web Design</a></li>
-<li><a href='your-link-here'>Web Development</a></li>
-<li><a href='your-link-here'>Illustrations</a></li>
+<li><a href='your-link-here'>Portfolio</a></li>
+<li><a href='your-link-here'>Contacto</a></li>
 </ul>
-</li>
-<li><a href='your-link-here'>Blog</a></li>
-<li><a href='your-link-here'>Contact</a></li>
-</ul></div>
+
+
+<form class="formulariodemo cf" action='http://www.diegosfera.blogspot.mx/search' method='get'>
+  <input type="text" placeholder="Buscar en la diegosfera..."  name="q"  />
+  <button type="submit">buscar</button>
+</form>
+
+
+<style>
+
+  .cf:before, .cf:after {
+    content:"";
+    display:table;
+  }
+  .cf:after {clear:both; }
+  .cf { zoom:1; }
+
+   /* el formulario en si mismo */
+  .formulariodemo {
+
+    border-radius: 5px;
+    margin: 0 auto;
+    padding:4px;
+    width: 290px;
+    display:inline-block;
+  }
+
+   /* la caja donde se ingresa el texto a buscar */
+  .formulariodemo input {
+    background-color: #EEE;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    float: left;
+    font-family: Helvetica;
+    font-size:15px;
+    height: 20px;
+    color:#9099A1;
+    padding: 10px 5px;
+    width: 200px;
+  }
+  .formulariodemo input:focus {
+    outline: 0;
+    background: #FFF;
+    box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+  }
+
+  /* el estilo de del atributo placeholder debe ser declarado para cada navegador de modo separado */
+  .formulariodemo input:-moz-placeholder { color: #999; font-weight: normal; font-style: italic; }
+  .formulariodemo input::-webkit-input-placeholder { color: #999; font-weight: normal; font-style: italic; }
+  .formulariodemo input:-ms-input-placeholder { color: #999; font-weight: normal; font-style: italic; }
+
+  /* aquí iría el estilo de del atributo required si es que se desea definirlo */
+  .formulariodemo input:required { box-shadow: none; }
+
+   /* el botón de envio */
+  .formulariodemo button {
+    background-color: #6E6E6E;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    color: #FFF;
+    cursor: pointer;
+    float: right;
+    font-family: Helvetica;
+    font-size: 15px;
+    font-weight: bold;
+    height: 40px;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    text-transform: uppercase;
+    width: 80px;
+  }
+  .formulariodemo button:hover{ background: #444444; } 
+  .formulariodemo button:active, .formulariodemo button:focus{ background: #444444; }
+  .formulariodemo button:before { /* el detalle del triángulo izquierdo */
+    content: "";
+    border-color: transparent #6E6E6E transparent;
+    border-style: solid solid solid none;
+    border-width: 8px 8px 8px 0;
+    left: -6px;
+    position: absolute;
+    top: 12px;
+  }
+  .formulariodemo button:hover:before { border-right-color: #444444; }
+  .formulariodemo button:focus:before { border-right-color: #444444; }    
+
+</style>
+
+
+</div>
   <b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'>
-    <b:widget id='Navbar1' locked='true' title='Navbar' type='Navbar'>
+    <b:widget id='Navbar1' locked='true' title='Barra de navegación' type='Navbar'>
       <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt;
     function setAttributeOnload(object, attribute, val) {
       if(window.addEventListener) {
@@ -1515,16 +1605,13 @@ document.getElementById(&#39;fb-root&#39;).appendChild(e);
 &lt;div id=&quot;navbar-iframe-container&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://apis.google.com/js/plusone.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
-        gapi.load(&quot;iframes-styles-bubble&quot;, function() {
-          if (window.iframes &amp;&amp; iframes.open) {
-            iframes.open(
-                &#39;//www.blogger.com/navbar.g?targetBlogID\0756728253225570981148\46blogName\75Flat+Diary\46publishMode\75PUBLISH_MODE_BLOGSPOT\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75http://bloggerqtemplate.blogspot.com/search\46blogLocale\75en_GB\46v\0752\46homepageUrl\75http://bloggerqtemplate.blogspot.com/\46blogFollowUrl\75https://plus.google.com/113734692676837213127\46vt\75-2989557200149379064&#39;,
-                {
-                  container: &quot;navbar-iframe-container&quot;,
-                  id: &quot;navbar-iframe&quot;
-                },
-                {
-                });
+        gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
+          if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
+            gapi.iframes.getContext().openChild({
+                url: &#39;//www.blogger.com/navbar.g?targetBlogID\759018589672183614900\46blogName\75La+Diegosfera\46publishMode\75PUBLISH_MODE_BLOGSPOT\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75http://diegosfera.blogspot.com/search\46blogLocale\75es\46v\0752\46homepageUrl\75http://diegosfera.blogspot.com/\46blogFollowUrl\75https://plus.google.com/100170421461856972664\46vt\75-4933429056776062877&#39;,
+                where: document.getElementById(&quot;navbar-iframe-container&quot;),
+                id: &quot;navbar-iframe&quot;
+            });
           }
         });
       &lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;
@@ -1682,7 +1769,7 @@ head.appendChild(script);
         <div class='column-center-outer'>
         <div class='column-center-inner'>
           <b:section class='main' id='main' showaddelement='no'>
-            <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
+            <b:widget id='Blog1' locked='true' title='Entradas del blog' type='Blog'>
               <b:includable id='main' var='top'>
   <b:if cond='data:mobile == &quot;false&quot;'>
 
@@ -2947,21 +3034,7 @@ printRelatedLabels_thumbs(&quot;<data:post.url/>&quot;);
  </b:section> 
 </div> 
 <div id='lowerbar-wrapper'> 
-<b:section class='lowerbar' id='lowerbar3' preferred='yes'>
-   <b:widget id='HTML2' locked='false' title='Like Us' type='HTML'>
-     <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-   </b:widget>
- </b:section> 
+<b:section class='lowerbar' id='lowerbar3' preferred='yes'/> 
 </div> 
 <div style='clear: both;'/> 
 </div> </div>

@@ -386,10 +386,15 @@ margin-top: -30px;
 
 /*MI EDICIÓN*/
 
+.widget ul{
+  margin-left:-20px;
+}
+
 .list-label-widget-content li
 {
   display:inline-block;
   list-style:none;
+  margin:-10px 0 0 -3px;
 }
 
 /* Css3 Media Queries */
@@ -467,7 +472,7 @@ width: 712px;
 .titlefollow {
 width: 717px;
 }
-.sidebar .widget {
+.sidebar |{
 width: 720px;
 }
 #lower{display:none}
@@ -1521,10 +1526,13 @@ document.getElementById(&#39;fb-root&#39;).appendChild(e);
   .formulariodemo {
 
     border-radius: 5px;
-    margin: 0 auto;
+    margin: 4px auto;
     padding:4px;
     width: 290px;
     display:inline-block;
+    float:right;
+    margin-right:60px;
+    vertical-align:middle;
   }
 
    /* la caja donde se ingresa el texto a buscar */
@@ -1542,8 +1550,7 @@ document.getElementById(&#39;fb-root&#39;).appendChild(e);
   }
   .formulariodemo input:focus {
     outline: 0;
-    background: #FFF;
-    box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+    box-shadow: 0 0 4px rgba(221, 81, 54,.8) inset;
   }
 
   /* el estilo de del atributo placeholder debe ser declarado para cada navegador de modo separado */
@@ -1556,7 +1563,7 @@ document.getElementById(&#39;fb-root&#39;).appendChild(e);
 
    /* el botón de envio */
   .formulariodemo button {
-    background-color: #6E6E6E;
+    background-color: #dd5136;
     border: none;
     border-radius: 0 8px 8px 0;
     color: #FFF;
@@ -1576,7 +1583,7 @@ document.getElementById(&#39;fb-root&#39;).appendChild(e);
   .formulariodemo button:active, .formulariodemo button:focus{ background: #444444; }
   .formulariodemo button:before { /* el detalle del triángulo izquierdo */
     content: "";
-    border-color: transparent #6E6E6E transparent;
+    border-color: transparent #dd5136 transparent;
     border-style: solid solid solid none;
     border-width: 8px 8px 8px 0;
     left: -6px;

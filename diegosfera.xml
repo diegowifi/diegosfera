@@ -173,7 +173,7 @@ visibility: visible;
 .menunav a{
 text-decoration:none;
 font-size:18px;color: #333333;
-font-family: 'Lora', serif;
+font-family: 'Ubuntu', serif;
 line-height: 26px;
 }
 .post-outer{
@@ -255,10 +255,12 @@ padding-top:10px;
 padding-bottom:5px;
 padding-right:5px;
 font-size:24px;
+background-color:#435482;
 }
 body{
-font-family: 'Lora';
+font-family: 'Helvetica';
 font-style: normal;
+color:#515151;
 font-weight: 400;
 font-size:16px;
 }.arrowi{margin-bottom:-5px;margin-top:13px}
@@ -364,7 +366,7 @@ margin-top:30px;
 }
 .pagenavi .current {
 text-decoration: none;
-border: 1px solid #dd5136;;
+border: 1px solid #435482;
 color: #fff;
 }
 .pagenavi {
@@ -386,6 +388,11 @@ margin-top: -30px;
 
 /*MI EDICIÓN*/
 
+#header-inner
+{
+  background-color:#435482;
+}
+
 .widget ul{
   margin-left:-20px;
 }
@@ -395,6 +402,21 @@ margin-top: -30px;
   display:inline-block;
   list-style:none;
   margin:-10px 0 0 -3px;
+}
+
+.list-label-widget-content li a
+{
+ background-color:#435482;
+}
+
+.list-label-widget-content li a:hover
+{
+ background-color:#1b243a;
+}
+
+a:visited
+{
+  color:#435482;
 }
 
 /* Css3 Media Queries */
@@ -678,7 +700,7 @@ margin-left: -10px;
 margin-top: 60px !important;
 margin-left: -1px;
 margin-right: -1px;
-background: #dd5136;
+background: #435482;
 padding-top: 20px;
 padding-bottom: 20px;
 }
@@ -810,6 +832,7 @@ $(&quot;.menunav&quot;).tinyNav({
 <style>  
 .post-title{display:block;display: block;
 font-family: &#39;Ubuntu&#39;;
+color:#3f3f3f;
 font-style: normal;
 font-weight: 400;
 font-size: 34px;
@@ -1525,13 +1548,13 @@ document.getElementById(&#39;fb-root&#39;).appendChild(e);
    /* el formulario en si mismo */
   .formulariodemo {
 
-    border-radius: 5px;
+    border-radius: 3px;
     margin: 4px auto;
     padding:4px;
-    width: 290px;
+    width: 316px;
     display:inline-block;
     float:right;
-    margin-right:60px;
+    margin-right:62px;
     vertical-align:middle;
   }
 
@@ -1539,33 +1562,34 @@ document.getElementById(&#39;fb-root&#39;).appendChild(e);
   .formulariodemo input {
     background-color: #EEE;
     border: none;
-    border-radius: 8px 0 0 8px;
+    border-radius: 3px 0 0 3px;
     float: left;
-    font-family: Helvetica;
-    font-size:15px;
+    font-family: 'Helvetica';
+    font-size:14px;
+    font-weight:bold;
     height: 20px;
     color:#9099A1;
-    padding: 10px 5px;
-    width: 200px;
+    padding: 10px 10px;
+    width: 216px;
   }
   .formulariodemo input:focus {
     outline: 0;
-    box-shadow: 0 0 4px rgba(221, 81, 54,.8) inset;
+    box-shadow: 0 0 4px rgba(67, 84, 130,.9) inset;
   }
 
   /* el estilo de del atributo placeholder debe ser declarado para cada navegador de modo separado */
-  .formulariodemo input:-moz-placeholder { color: #999; font-weight: normal; font-style: italic; }
-  .formulariodemo input::-webkit-input-placeholder { color: #999; font-weight: normal; font-style: italic; }
-  .formulariodemo input:-ms-input-placeholder { color: #999; font-weight: normal; font-style: italic; }
+  .formulariodemo input:-moz-placeholder { color: #999; font-weight: bold; }
+  .formulariodemo input::-webkit-input-placeholder { color: #999; font-weight: bold;  }
+  .formulariodemo input:-ms-input-placeholder { color: #999; font-weight: bold;  }
 
   /* aquí iría el estilo de del atributo required si es que se desea definirlo */
   .formulariodemo input:required { box-shadow: none; }
 
    /* el botón de envio */
   .formulariodemo button {
-    background-color: #dd5136;
+    background-color: #435482;
     border: none;
-    border-radius: 0 8px 8px 0;
+    border-radius: 0 3px 3px 0;
     color: #FFF;
     cursor: pointer;
     float: right;
@@ -1578,20 +1602,30 @@ document.getElementById(&#39;fb-root&#39;).appendChild(e);
     position: relative;
     text-transform: uppercase;
     width: 80px;
+    transition: background-color .777s;
+-webkit-transition: background-color .777s;
+-moz-transition: background-color .777s;
+-o-transition: background-color .777s;
+-ms-transition: background-color .777s;
   }
-  .formulariodemo button:hover{ background: #444444; } 
-  .formulariodemo button:active, .formulariodemo button:focus{ background: #444444; }
+  .formulariodemo button:hover{ background: #1b243a; } 
+  .formulariodemo button:active, .formulariodemo button:focus{ background: #1b243a; }
+
+  /*
   .formulariodemo button:before { /* el detalle del triángulo izquierdo */
     content: "";
-    border-color: transparent #dd5136 transparent;
+    border-color: transparent #435482 transparent;
     border-style: solid solid solid none;
     border-width: 8px 8px 8px 0;
     left: -6px;
     position: absolute;
     top: 12px;
   }
+
   .formulariodemo button:hover:before { border-right-color: #444444; }
-  .formulariodemo button:focus:before { border-right-color: #444444; }    
+  .formulariodemo button:focus:before { border-right-color: #444444; } 
+
+  */   
 
 </style>
 
@@ -2399,8 +2433,8 @@ prevText: &quot;&#171;&quot;
       <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='description articleBody'>
 <b:if cond='data:blog.pageType == &quot;item&quot;'>
 <div class='postmeta-primary'>
-  <span class='meta_date'>On: <data:post.timestamp/></span>
-<span class='author'>By: <a expr:href='data:post.authorProfileUrl'> <data:post.author/></a> </span>
+  <span class='meta_date'>A las: <data:post.timestamp/></span>
+<span class='author'>Por: <a expr:href='data:post.authorProfileUrl'> <data:post.author/></a> </span>
 
 <span class='post-comment-link'>
 
@@ -2466,7 +2500,7 @@ createSummaryAndThumb(&quot;summary<data:post.id/>&quot;);
             </h2>
           </b:if></div>
 <div class='shr-btn-scl'>
-<iframe allowTransparency='true' expr:src='&quot;http://www.facebook.com/plugins/like.php?href=&quot; + data:post.url + &quot;&amp;send=false&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=21&quot;' frameborder='0' scrolling='no' style='border:none; overflow:hidden; width:90px; height:21px;'/>
+<iframe allowTransparency='true' expr:src='&quot;http://www.facebook.com/plugins/like.php?href=&quot; + data:post.url + &quot;&amp;send=false&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=21&quot;' frameborder='0' scrolling='no' style='border:none; overflow:hidden; width:110px; height:21px;'/>
 
 
 <a class='twitter-share-button' data-count='horizontal' data-related='' data-via='bloglordhtml' expr:data-text='data:post.title' expr:data-url='data:post.url' href='http://twitter.com/share'>Tweet</a>
@@ -2903,6 +2937,7 @@ printRelatedLabels_thumbs(&quot;<data:post.url/>&quot;);
         <div class='column-right-outer'>
         <div class='column-right-inner'>
 
+<!--FOLLOW WIDGET ON SIDEBAR
 
           <div class='titlefollow'>Follow Us</div>
 <div class='boxingofscl'>
@@ -2910,14 +2945,14 @@ printRelatedLabels_thumbs(&quot;<data:post.url/>&quot;);
 
 <div class='scl-btn-sid'><a href='http://www.twitter.com/bloglordhtml' target='_blank'><img border='0' src='http://2.bp.blogspot.com/-B3UXsAyQbdw/Uin2scG5PKI/AAAAAAAAAQU/zcSj3UljGCw/s1600/twitter.png'/></a></div>
 
-<div class='scl-btn-sid'><a href='http://www.plus.google.com/username' target='_blank'><img border='0' src='http://3.bp.blogspot.com/--Pp4ZjOu4Ew/Uin2qgGT5zI/AAAAAAAAAP4/sMX3HGgzctE/s1600/google+.png'/></a></div>
+<div class='scl-btn-sid'><a href='http://www.plus.google.com/username' target='_blank'><img border='0' src='http://3.bp.blogspot.com/Pp4ZjOu4Ew/Uin2qgGT5zI/AAAAAAAAAP4/sMX3HGgzctE/s1600/google+.png'/></a></div>
 
 <div class='scl-btn-sid'><a href='http://www.youtube.com/username' target='_blank'><img border='0' src='http://3.bp.blogspot.com/-2KJ18EdFkdM/Uin2sS-cP1I/AAAAAAAAAQQ/7Vv8-WQWRQo/s1600/youtube.png'/></a></div>
 
 <div class='scl-btn-sid'><a href='http://www.youtube.com/username' target='_blank'><img border='0' src='http://2.bp.blogspot.com/-aVX-dCRSr-A/Uin2qzynvOI/AAAAAAAAAQI/l-Mn8lg6sPs/s1600/rss.png'/></a></div>
           </div><br/>
 
-
+-->
 
           <aside>
           <macro:include id='main-column-right-sections' name='sections'>

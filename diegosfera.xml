@@ -27,13 +27,13 @@ URL:      www.seobloggertemplates.com
 /* Variable definitions
 ====================
 <Group description="Theme Color">
-<Variable name="theme.background.color" description="Choose Color" type="color" default="#66bbdd" value="#dd5136"/>
+<Variable name="theme.background.color" description="Choose Color" type="color" default="#66bbdd" value="#435482"/>
 </Group>
 <Group description="Background Color" selector="body">
 <Variable name="body.back.color" description="Choose Color" type="color" default="#66bbdd" value="#eaebed"/>
 </Group>
 <Group description="Links" selector=".main-outer">
-<Variable name="link.color" description="Link Color" type="color" default="#2288bb" value="#dd5136"/>
+<Variable name="link.color" description="Link Color" type="color" default="#2288bb" value="#3ea55f"/>
 <Variable name="link.hover.color" description="Hover Color" type="color" default="#33aaff" value="#33aaff"/>
 </Group>
 */
@@ -414,9 +414,19 @@ margin-top: -30px;
  background-color:#1b243a;
 }
 
-a:visited
+.post-labels a
+{
+  color:#3ea55f;
+}
+
+.nichewala a
 {
   color:#435482;
+}
+
+.blogcommentbox h2
+{
+  width:300px;
 }
 
 /* Css3 Media Queries */
@@ -1113,8 +1123,8 @@ padding-right: 10px;
 }
 .likebtn{
 border-right: 1px solid #ccc;
-padding-right: 10px;
-padding-left: 10px;
+padding-right: 0px;
+padding-left: 5px;
 }
 .tweetbtn{
 border-right: 1px solid #ccc;
@@ -1122,7 +1132,6 @@ padding-right: 10px;
 padding-left: 10px;
   }.plusbtn{
 padding-left: 10px;
-
   }
 #related-posts img {
 width: 234px;
@@ -1394,7 +1403,7 @@ display: none;
 var defaultnoimage=&quot;http://3.bp.blogspot.com/-PpjfsStySz0/UF91FE7rxfI/AAAAAAAACl8/092MmUHSFQ0/s1600/no_image.jpg&quot;;
 var maxresults=3;
 var splittercolor=&quot;#DDDDDD&quot;;
-var relatedpoststitle=&quot;Related Posts&quot;;
+var relatedpoststitle=&quot;Publicaciones relacionadas&quot;;
 </script>
 </b:if>
 <script type='text/javascript'>
@@ -1524,7 +1533,7 @@ document.getElementById(&#39;fb-root&#39;).appendChild(e);
  
 <div id='menunav'>
 <ul class='menunav'><li><a href='/'>Inicio</a></li>
-<li><a href='your-link-here'>About</a></li>
+<li><a href='http://diegosfera.blogspot.mx/p/acerca-de.html'>Acerca de</a></li>
 <li><a href='your-link-here'>Portfolio</a></li>
 <li><a href='your-link-here'>Contacto</a></li>
 </ul>
@@ -1566,7 +1575,6 @@ document.getElementById(&#39;fb-root&#39;).appendChild(e);
     float: left;
     font-family: 'Helvetica';
     font-size:14px;
-    font-weight:bold;
     height: 20px;
     color:#9099A1;
     padding: 10px 10px;
@@ -1578,9 +1586,9 @@ document.getElementById(&#39;fb-root&#39;).appendChild(e);
   }
 
   /* el estilo de del atributo placeholder debe ser declarado para cada navegador de modo separado */
-  .formulariodemo input:-moz-placeholder { color: #999; font-weight: bold; }
-  .formulariodemo input::-webkit-input-placeholder { color: #999; font-weight: bold;  }
-  .formulariodemo input:-ms-input-placeholder { color: #999; font-weight: bold;  }
+  .formulariodemo input:-moz-placeholder { color: #999; font-weight: normal; }
+  .formulariodemo input::-webkit-input-placeholder { color: #999; font-weight: normal;  }
+  .formulariodemo input:-ms-input-placeholder { color: #999; font-weight: normal;  }
 
   /* aquí iría el estilo de del atributo required si es que se desea definirlo */
   .formulariodemo input:required { box-shadow: none; }
@@ -2480,7 +2488,7 @@ createSummaryAndThumb(&quot;summary<data:post.id/>&quot;);
 </b:if><div style='clear: both;'/> <!-- clear for photos floats -->
       </div>
     </b:if><div class='hoveron'>
-<div class='postdetail'><span class='author'>Posted By:  <a expr:href='data:post.authorProfileUrl'> <data:post.author/></a> </span>
+<div class='postdetail'><span class='author'>Publicado por:  <a expr:href='data:post.authorProfileUrl'> <data:post.author/></a> </span>
 </div>
 <b:if cond='data:post.title'>
             <h2 class='post-title entry-title homewalatitle' itemprop='name'>
@@ -2515,8 +2523,8 @@ createSummaryAndThumb(&quot;summary<data:post.id/>&quot;);
 <div class='arrowi'>
 <img border='0' src='http://1.bp.blogspot.com/-s_EHHHTxTaU/Un8uEqGHw4I/AAAAAAAAAcs/ZjqIWBllOf4/s1600/arrow.png'/></div>
     <b:if cond='data:blog.pageType == &quot;item&quot;'>
-      <div class='shr-btn-scl2'><span class='wow'>Share:</span>
-    <span class='likebtn'><iframe allowTransparency='true' expr:src='&quot;http://www.facebook.com/plugins/like.php?href=&quot; + data:post.url + &quot;&amp;send=false&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=21&quot;' frameborder='0' scrolling='no' style='border:none; overflow:hidden; width:90px; height:21px;'/></span>
+      <div class='shr-btn-scl2'><span class='wow'>Compartir:</span>
+    <span class='likebtn'><iframe allowTransparency='true' expr:src='&quot;http://www.facebook.com/plugins/like.php?href=&quot; + data:post.url + &quot;&amp;send=false&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=21&quot;' frameborder='0' scrolling='no' style='border:none; overflow:hidden; width:110px; height:21px; vertical-align:middle;'/></span>
 
 <span class='tweetbtn'>
   <a class='twitter-share-button' data-count='horizontal' data-related='' data-via='bloglordhtml' expr:data-text='data:post.title' expr:data-url='data:post.url' href='http://twitter.com/share'>Tweet</a></span>
@@ -2547,7 +2555,7 @@ printRelatedLabels_thumbs(&quot;<data:post.url/>&quot;);
       </div>
 
 <div class='blogcommentbox'>
-    <h2>Post a Comment </h2>
+    <h2>Escribe un comentario </h2>
   <div class='fbcmt'>Facebook</div>
   <div class='bloggercmt'>Blogger</div>
   </div>
